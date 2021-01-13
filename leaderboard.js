@@ -89,8 +89,20 @@ We have provided stubbed out code and tests for you below. Please note that thes
 
 
 // Your code goes here. Feel free to make helper classes if needed
+class Player {
+	constructor() {
+		this.scores = [];
+		this.average = this.getAverage()
+	}
+
+	getAverage = () => {
+		return this.scores.reduce((accumulator, current) => accumulator + current, 0) / this.scores.length;
+	}
+}
+
 class LeaderBoard {
-  constructor() {
+	constructor() {
+		this.players = {}
   }
 
   add_score = (player_id, score) => {
